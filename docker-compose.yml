@@ -1,0 +1,16 @@
+version: '3'
+services:
+  apollo-server:
+    build: ./server
+    tty: true
+    volumes:
+      - ./server:/app/server
+    ports:
+      - "8080:4000"
+  apollo-client:
+    build: ./client
+    tty: true
+    volumes:
+      - ./client:/app/client
+    ports:
+      - "8081:3000"
