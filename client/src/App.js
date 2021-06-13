@@ -5,7 +5,7 @@ import { ApolloProvider, useQuery } from "@apollo/react-hooks";
 const App = () => {
   // Apollo Clientを初期化する
   const client = useMemo(
-    () => new ApolloClient({ uri: "http://localhost:4000" }),
+    () => new ApolloClient({ uri: "http://localhost:8080" }),
     []
   );
 

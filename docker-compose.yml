@@ -7,6 +7,8 @@ services:
       - ./server:/app/server
     ports:
       - "8080:4000"
+    networks:
+      - apollo-net  
   apollo-client:
     build: ./client
     tty: true
@@ -14,3 +16,8 @@ services:
       - ./client:/app/client
     ports:
       - "8081:3000"
+    networks:
+      - apollo-net  
+networks:
+  apollo-net:
+    driver: bridge

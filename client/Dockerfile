@@ -1,4 +1,4 @@
-FROM node:14.4.0-slim
+FROM node:14.4.0
 
 # アプリケーションディレクトリを作成する
 
@@ -9,5 +9,6 @@ RUN yarn install
 
 COPY . .
 
-EXPOSE 3000
 CMD ["npm", "start"]
+
+EXPOSE 3000

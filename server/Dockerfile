@@ -1,4 +1,4 @@
-FROM node:14.4.0-slim
+FROM node:14.4.0
 
 # アプリケーションディレクトリを作成する
 
@@ -8,5 +8,6 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 4000
 CMD ["npm", "start"]
+
+EXPOSE 4000
